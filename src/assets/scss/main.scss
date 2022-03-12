@@ -1,0 +1,101 @@
+@import 'vue-ldc/css/message.scss';
+@import 'vue-ldc/css/loading.scss';
+@import 'vue-ldc/css/pagination.scss';
+@import 'vue-ldc/css/select.scss';
+// @import './action-table-web.scss';
+// @import './table.scss';
+@import 'vue-ldc/css/dropdown.scss';
+@import 'vue-ldc/css/confirm.scss';
+@import 'vue-ldc/css/model-mobile.scss';
+// @import './action-table-mobile.scss';
+@import 'vue-ldc/css/dialog.scss';
+@import 'vue-ldc/css/select-mobile.scss';
+@import 'vue-ldc/css/select-show-option.scss';
+@import 'vue-ldc/css/time.scss';
+@import 'vue-ldc/css/loading-fullscreen.scss';
+// @import './list-table.scss';
+
+$sizes: 5px, 10px, 12px, 15px, 20px, 25px, 30px, 35px;
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size in $sizes {
+        .#{$abbrev}-#{$size} {
+            #{$prop}: $size !important;
+        }
+
+        .#{$abbrev}l-#{$size} {
+            #{$prop}-left: $size !important;
+        }
+
+        .#{$abbrev}r-#{$size} {
+            #{$prop}-right: $size !important;
+        }
+
+        .#{$abbrev}t-#{$size} {
+            #{$prop}-top: $size !important;
+        }
+
+        .#{$abbrev}b-#{$size} {
+            #{$prop}-bottom: $size !important;
+        }
+
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-left: $size !important;
+            #{$prop}-right: $size !important;
+        }
+
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top: $size !important;
+            #{$prop}-bottom: $size !important;
+        }
+    }
+}
+$fontsize: 10px, 11px, 12px, 13px, 14px, 15px, 16px, 17px, 18px, 20px;
+@each $fonts in $fontsize {
+    .fs-#{$fonts} {
+        font-size: $fonts !important;
+    }
+}
+$fontweight: 300, 400, 600, 700;
+@each $fontw in $fontweight {
+    .fw-#{$fontw} {
+        font-weight: $fontw !important;
+    }
+}
+.vg-scrollbar {
+    scrollbar-color: rgba(12, 129, 246, 0.6) white;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(12, 129, 246, 0.6);
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #fff;
+        border-radius: 20px;
+    }
+}
+
+.show-menu{
+    animation: show-menu 300ms cubic-bezier(0,0,.2,1) 0ms;
+}
+@-webkit-keyframes show-menu {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes show-menu {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
